@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/POS/bin/Debug
+/POS/obj
+/.vs/POS/v17
+/.vs/POS/FileContentIndex
