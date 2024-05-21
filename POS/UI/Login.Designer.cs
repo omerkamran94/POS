@@ -45,9 +45,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(243, 73);
+            this.label3.Location = new System.Drawing.Point(157, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 69);
+            this.label3.Size = new System.Drawing.Size(300, 69);
             this.label3.TabIndex = 2;
             this.label3.Text = "DOT POS";
             // 
@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 553);
+            this.ClientSize = new System.Drawing.Size(625, 535);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtpassword);

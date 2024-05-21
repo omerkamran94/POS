@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using DGVPrinterHelper;
 using POS.BLL;
 using POS.DAL;
+using POS.Utility;
 
 namespace POS.UI.Sales_Man
 {
@@ -857,19 +858,21 @@ namespace POS.UI.Sales_Man
 
                 if (sucess == true)
                 {
+                    PrinterUtility printerUtility = new PrinterUtility();
+                    printerUtility.PrintDocumentFromDataGridView(dgvinvoice);
                     //code to print Bill
-                    DGVPrinter printer = new DGVPrinter();
-                    printer.Title = "\r \r Hardware Store";
-                    printer.SubTitle = "Khokhar Plaza, Near Alied Bank, Main Behria Enclave Road \r \n Phone: 031659007044 \r \r \r \r \r \r Invoice #:" + lblinvoiceno.Text + "\r";
-                    printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
-                    printer.PageNumbers = true;
-                    printer.PageNumberInHeader = false;
-                    printer.PorportionalColumns = true;
-                    printer.HeaderCellAlignment = StringAlignment.Near;
-                    printer.Footer = "Grand Total: " + txtsubtotal.Text + " \r \r \r \r \r \r \r \r \r \r \r \r" + "Total Paid:" + txtpaidamount.Text + " \r \n" + "Thank You, for doing business with us. \n";
-                    //printer.PageText = "Developed By: \r \r \r Engr. Azhar Mir \r \r \r \r \r \r \r \r \r Mailing Contact: \r \r \r azharmir526@live.com \n";
-                    printer.FooterSpacing = 2;
-                    printer.PrintDataGridView(dgvinvoice);
+                    //DGVPrinter printer = new DGVPrinter();
+                    //printer.Title = "\r \r Hardware Store";
+                    //printer.SubTitle = "Khokhar Plaza, Near Alied Bank, Main Behria Enclave Road \r \n Phone: 031659007044 \r \r \r \r \r \r Invoice #:" + lblinvoiceno.Text + "\r";
+                    //printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+                    //printer.PageNumbers = true;
+                    //printer.PageNumberInHeader = false;
+                    //printer.PorportionalColumns = true;
+                    //printer.HeaderCellAlignment = StringAlignment.Near;
+                    //printer.Footer = "Grand Total: " + txtsubtotal.Text + " \r \r \r \r \r \r \r \r \r \r \r \r" + "Total Paid:" + txtpaidamount.Text + " \r \n" + "Thank You, for doing business with us. \n";
+                    ////printer.PageText = "Developed By: \r \r \r Engr. Azhar Mir \r \r \r \r \r \r \r \r \r Mailing Contact: \r \r \r azharmir526@live.com \n";
+                    //printer.FooterSpacing = 2;
+                    //printer.PrintDataGridView(dgvinvoice);
 
 
                     MessageBox.Show("Transaction Completed Sucessfully");

@@ -99,7 +99,8 @@ namespace POS
         private void Main_Load(object sender, EventArgs e)
         {
             //Getting username 
-            lblusername.Text = Login.loggedIn;
+            //lblusername.Text = Login.loggedIn;
+            lblname.Text = Login.loggedIn;
         }
 
        

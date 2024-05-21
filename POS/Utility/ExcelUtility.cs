@@ -62,10 +62,10 @@ namespace POS.Utility
 
                 name += "_" + DateTime.Now.ToString("ddMMyyyyhhmms");
                 // save the application  
-                workbook.SaveAs("D:\\Downloads\\" + name + ".xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+                workbook.SaveAs("C:\\" + name + ".xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
                 // Exit from the application  
                 app.Quit();
-                MessageBox.Show("File: '" +name+ "'  Downloaded Successfully");
+                MessageBox.Show("File: '" +name+ "'  Downloaded Successfully in C:\\ Drive");
             }
             catch(Exception ex)
             {

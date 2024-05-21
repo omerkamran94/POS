@@ -60,11 +60,16 @@ namespace POS.Utility
                 printer.PorportionalColumns = true;
                 printer.HeaderCellAlignment = StringAlignment.Near;
                 printer.Footer = this.Footer;
-                printer.FooterSpacing = 10;
+                //printer.FooterSpacing = 10;
                 printer.TableAlignment = DGVPrinter.Alignment.Center;
             //  printer.ImbeddedImageList.Add(CreateImage());
-             printer.PageSettings.PaperSize = new PaperSize("MyPaper", 3,10);
-            printer.PrintDataGridView(dgv);
+             printer.PageSettings.PaperSize = new PaperSize("pprnm", 285,600);
+
+            PrintPreviewDialog printPreviewDialog  = new PrintPreviewDialog();
+            printPreviewDialog.Document = printer.printDocument;
+            printPreviewDialog.ShowDialog();
+
+         //   printer.PrintDataGridView(dgv);
  
         }
 
@@ -86,7 +91,9 @@ namespace POS.Utility
             printer.FooterSpacing = 10;
             printer.TableAlignment = DGVPrinter.Alignment.Center;
             //  printer.ImbeddedImageList.Add(CreateImage());
-            printer.PageSettings.PaperSize = new PaperSize("MyPaper", 3, 10);
+            printer.PageSettings.PaperSize = new PaperSize("MyPaper", 250, 500);
+
+            
             printer.PrintDataTable(dataTable);
 
         }
